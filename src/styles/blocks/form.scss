@@ -1,0 +1,173 @@
+.form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.form__cell {
+  margin-bottom: rem(20);
+}
+
+.form__phone {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form__warning {
+  font-size: rem(12);
+  color: $warning;
+}
+
+.form__change {
+  display: flex;
+  width: 70%;
+  min-height: rem(50);
+  border: 1px solid $border;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: rem(40);
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.form__radio {
+  display: none;
+
+  &:checked + .form__visible {
+    color: $check;
+    background-color: $logo-color;
+  }
+}
+
+.form__choise {
+  flex: 1;
+}
+
+.form__line {
+  width: 1px;
+  background-color: $border;
+}
+
+.form__visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transition: 0.4s;
+  cursor: pointer;
+  color: $text-title;
+}
+
+.form__consent {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(20);
+}
+
+.form__check {
+  display: none;
+
+  &:checked + .form__visible-check .form__mark {
+    opacity: 1;
+  }
+}
+
+.form__mark {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: 9px;
+  width: 4px;
+  height: 10px;
+  background-color: $logo-color;
+  transform: rotate(135deg);
+  opacity: 0;
+  transition: 0.4s;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 4px;
+    display: block;
+    content: '';
+    background-color: $logo-color;
+  }
+}
+
+.form__visible-check {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border;
+}
+
+.form__text {
+  font-size: rem(12);
+  margin-left: rem(15);
+}
+
+.form__link {
+  color: $border-btn;
+  border-bottom: 1px solid transparent;
+  transition: 0.4s;
+
+  &:hover {
+    border-bottom: 1px solid $border-btn;
+  }
+}
+
+.form__btns {
+  display: flex;
+  justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.form__btn {
+  width: 48%;
+
+  @include phones {
+    width: 100%;
+  }
+}
+
+.form__btn {
+  font-weight: 500;
+  padding: rem(15);
+  border-radius: 3px;
+  transition: 0.4s;
+
+  &_send {
+    border-color: transparent;
+    background-color: $logo-color;
+    color: $check;
+
+    @include phones {
+      margin-bottom: rem(20);
+    }
+
+    &:hover {
+      border-color: $header-bg;
+      color: $header-bg;
+    }
+  }
+
+  &_clear {
+    color: $text-color;
+    background-color: $check;
+    
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

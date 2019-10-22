@@ -1,0 +1,55 @@
+section.slider#slider
+  .container
+    h2.slider__title.title А это еще один заголовок
+    .slider__info
+      p.slider__text Нам нужен полностью адаптивный сайт, чтобы он был красив для любого разрешения и любого устройства.<br> А если ты умеешь делать так, чтобы и кегль подстраивался — наш дизайнер пустит слезу, а может даже две.<br> А потом выпьет дома чая за твое здоровье.
+      p.slider__another-text Если при скроллинге изображения будут идти плавно и асинхронно — наш дизайнер опять пустит слезу от счастья.<br>А еще мы не любим висячие предлоги и союзы. Зато любим ховеры.
+    .slider__wrapper
+      .slider__window
+        ul.slider__list
+          -
+            var items = [
+              {
+                title: 'Блок 1',
+                text: 'Это наш любимый блок, он самый стильный, подтянутый и аккуратный'
+              },
+              {
+                title: 'Блок 2',
+                text: 'Этот блок нам нравится меньше, возможно он много болел в детстве'
+              },
+              {
+                title: 'Блок 3',
+                text: 'А этот слишком много ест... И ест чужую еду, как наш арт-директор, хотя это ложь А этот слишком много ест... И ест чужую еду, как наш арт-директор, хотя это ложь'
+              },
+              {
+                title: 'Блок 4',
+                text: 'Этот блок мы спрятали, потому что он нам не нравится вообще, но он нам нужен'
+              },
+              {
+                title: 'Блок 4',
+                text: 'Этот блок мы спрятали, потому что он нам не нравится вообще, но он нам нужен'
+              },
+              {
+                title: 'Блок 4',
+                text: 'Этот блок мы спрятали, потому что он нам не нравится вообще, но он нам нужен'
+              }
+            ]
+          each item in items
+            li.slider__item
+              .slider__container
+                .slider__head= item.title
+                p.slider__description= item.text
+                button.slider__details(type="button") Подробнее 
+      .slider__btns
+        button.slider__btn.slider__btn_prev(type='button')
+          img.slider__arrow(src="images/arrow.svg", alt="стрелка")
+        button.slider__btn.slider__btn_next(type='button')
+          img.slider__arrow(src="images/arrow.svg", alt="стрелка")
+      ul.slider__navigation
+        each item in items
+          if item.title == 'Блок 2'
+            li.slider__square.active
+          else
+            li.slider__square
+
+

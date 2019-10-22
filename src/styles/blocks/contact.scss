@@ -1,0 +1,50 @@
+.contact {
+  margin-bottom: rem(390);
+
+  @include tablets {
+    padding: 0 10%;
+  }
+
+  @include phones {
+    padding: 0;
+    margin-bottom: rem(106);
+  }
+}
+
+.contact__wrapper {
+  display: flex;
+  justify-content: center;
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.contact__info {
+  width: 40%;
+  padding-right: 10%;
+
+  @include tablets {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: rem(66);
+  }
+}
+
+.contact__title {
+  font-size: rem(32);
+  font-weight: 300;
+  margin-bottom: rem(20);
+
+  @include tablets {
+    padding: 0 10%;
+    text-align: center;
+    font-size: rem(24);
+  }
+
+}
+
+.contact__useless {
+  margin-bottom: rem(20);
+}
+

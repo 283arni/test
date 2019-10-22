@@ -1,0 +1,32 @@
+.menu {
+  position: fixed;
+  top: 0;
+  right: -8000px;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  transition: 1s;
+  background-color: $header-bg;
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(40);
+  }
+
+  .nav__item {
+    margin-left: 0;
+    margin-bottom: rem(40);
+  }
+
+  .nav__navbar {
+    display: none;
+  }
+}
+
+.menu_open {
+  right: 0;
+}

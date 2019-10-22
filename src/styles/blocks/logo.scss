@@ -1,0 +1,30 @@
+.logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.logo__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $logo-color2;
+
+  &::before, &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    @extend .logo__circle;
+    background-color: $logo-color;
+    top: 0;
+  }
+
+  &::before {
+    right: 0;
+  }
+
+  &::after {
+    left: 0;
+  }
+}

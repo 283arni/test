@@ -1,0 +1,17 @@
+.header {
+  height: rem(80);
+  background-color: $header-bg;
+  margin-bottom: rem(80);
+
+  @include phones {
+    margin-bottom: rem(40);
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: rem(14);
+  height: 100%;
+}

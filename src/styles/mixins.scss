@@ -1,0 +1,35 @@
+
+@mixin desktop() {
+  @media screen and (max-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin hero() {
+  @media screen and (max-width: $bp-hero) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media screen and (max-width: $bp-tablets) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: $bp-phones) {
+    @content;
+  }
+}
+
+
+@function rem($pixels, $context: $font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}

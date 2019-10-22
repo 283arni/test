@@ -1,0 +1,171 @@
+.slider {
+  margin-bottom: rem(120);
+
+  @include phones {
+    margin-bottom: rem(40);
+  }
+}
+
+.slider__wrapper {
+  width: 100%;
+}
+
+.slider__title {
+  text-align: center;
+  font-size: rem(32);
+  margin-bottom: rem(30);
+
+  @include phones {
+    padding: 0 10%;
+    font-size: rem(24);
+  }
+}
+
+.slider__info {
+  display: flex;
+  margin-bottom: rem(80);
+  justify-content: center;
+
+  @include phones {
+    display: block;
+  }
+}
+
+.slider__text {
+  width: 40%;
+  margin-right: rem(20);
+
+  @include phones {
+    margin-bottom: rem(20);
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.slider__another-text {
+  width: 40%;
+
+  @include phones {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.slider__window {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: rem(20);
+}
+
+.slider__list {
+  display: flex;
+  width: 100%;
+  transition: 1s;
+}
+
+.slider__item {
+  min-width: 33.34%;
+  display: flex;
+
+  @include tablets {
+    min-width: 50%;
+  }
+
+  @include phones {
+    min-width: 100%;
+  }
+}
+
+.slider__container {
+  padding: rem(20);
+  background-color: $slid-color;
+  margin: 0 rem(10);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include phones {
+    margin: 0;
+  }
+}
+
+.slider__head {
+  font-size: rem(20);
+  color: $text-title;
+  margin-bottom: rem(20);
+
+  @include phones {
+    font-size: rem(16);
+  }
+}
+
+.slider__description {
+  margin-bottom: rem(30);
+}
+
+.slider__details {
+  border-color: transparent;
+  color: $logo-color;
+  font-weight: 500;
+  padding: rem(5);
+  transition: 0.4s;
+
+  &:hover {
+    border-color: $logo-color;
+  }
+}
+
+.slider__btns {
+  display: flex;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.slider__btn {
+  width: 40px;
+  height: 40px;
+  background-color: $header-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  border-radius: 3px;
+  margin-left: rem(10);
+
+  &:hover {
+    border-color: #FD6141;
+  }
+  
+  &:disabled {
+    filter: grayscale(1);
+    border-color: transparent;
+  }
+
+  &_prev .slider__arrow{
+    transform: rotate(180deg);
+  }
+}
+
+.slider__navigation {
+  display: none;
+  justify-content: center;
+
+  @include phones {
+    display: flex;
+  }
+}
+
+.slider__square {
+  width: 10px;
+  height: 10px;
+  background-color: $square;
+  margin: 0 5px;
+
+  &.active {
+    background-color: $logo-color;
+  }
+}

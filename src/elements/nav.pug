@@ -1,0 +1,13 @@
+nav.nav
+  ul.nav__list
+    - 
+      var links = {
+        'Верх': '#header',
+        'Блок с блоками': '#slider',
+        'Форма': '#contact'
+      }
+    each val, key in links
+      li.nav__item
+        a.nav__link(href=`${val}`)= key
+  button.nav__navbar
+    .nav__line

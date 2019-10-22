@@ -1,0 +1,25 @@
+form.form#form(action="")
+  input.input.form__surname#surname(type="text" placeholder='Фамилия' required)
+  input.input.form__name#name(type="text" placeholder='Имя' required)
+  input.input.form__mail#mail(type="text" placeholder='Эл. почта' required)
+  label.form__cell(for="phone")
+    input.input.form__phone#phone(type="text" placeholder='Телефон' required)
+    .form__warning Мы будем использовать ваш номер телефона для навязчивого спама
+  input.input.form__born#born-data(type="text" placeholder='Дата рождения' required)
+  .form__change
+    label.form__choise
+      input.form__radio(type="radio" name="choise")
+      .form__visible Мужчина
+    .form__line
+    label.form__choise
+      input.form__radio(type="radio" name="choise")
+      .form__visible Женщина
+  label.form__consent
+    input.form__check(type="checkbox")
+    .form__visible-check
+      .form__mark
+    .form__text Согласен 
+      a.form__link(href="#") на всё
+  .form__btns
+    button.form__btn.form__btn_send(type="submit") Отправить
+    button.form__btn.form__btn_clear(type="reset") Очистить
